@@ -1,0 +1,36 @@
+.button {
+    padding: 15px 30px;
+    border-radius: 50px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: transform 0.2s ease-in-out;
+    transform: translateY(0);
+
+    &__primary {
+        background-color: $c-orange-primary;
+        box-shadow: 0px 6px 12px rgba(250, 180, 100, 0.5);
+        color: $c-white;
+    }
+
+    &__secondary {
+        border: 2px solid $c-grey;
+        color: $c-grey;
+    }
+
+    &__tertiary {
+        color: $c-grey;
+        background-color: $c-white;
+    }
+
+    &:hover {
+        transform: translateY(-4px);
+    }
+
+    &:active {
+        transform: translateY(-2px);
+    }
+}

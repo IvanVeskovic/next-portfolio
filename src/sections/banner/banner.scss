@@ -1,0 +1,108 @@
+.hero {
+    @include rowStyles;
+    display: flex;
+    align-items: center;
+
+    min-height: 650px;
+
+    &__content {
+        flex-basis: 50%;
+        position: relative;
+        z-index: 2;
+
+        h1 {
+            font-size: 48px;
+            line-height: 62px;
+            margin: 1px 0;
+
+            span {
+                background-color: $c-orange-primary;
+                background-image: linear-gradient(to bottom, $c-red-primary, $c-orange-primary);
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                display: block;
+            }
+        }
+
+        p {
+            color: $c-dark-1;
+            font-size: 22px;
+        }
+
+        small {
+            color: $c-grey;
+            font-size: 15px;
+        }
+    }
+
+    &__actions {
+        margin-top: 30px;
+
+        .button {
+            margin-right: 20px;
+        }
+    }
+
+    &__image {
+        flex-basis: 50%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        align-self: flex-end;
+
+        img {
+            width: 100%;
+            max-width: 465px;
+            -o-object-fit: contain;
+            object-fit: contain;
+            position: relative;
+            z-index: 1;
+            filter: drop-shadow(0 -6px 8px rgba(0, 0, 0, 0.5));
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            max-height: 500px;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-image: url('/images/shapes/hero-shape.svg');
+            @include backgroundProperty(center, contain);
+            z-index: 0;
+
+            animation-name: moveLeftAndRight;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+    }
+}
+
+@-webkit-keyframes moveLeftAndRight {
+    from {
+        margin-left: 20px;
+    }
+
+    to {
+        margin-left: -20px;
+    }
+}
+
+@keyframes moveLeftAndRight {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    50% {
+        transform: translateX(-55%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}

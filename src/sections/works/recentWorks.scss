@@ -1,0 +1,130 @@
+.works {
+    @include rowStyles;
+
+    &__header {
+        display: flex;
+        align-items: flex-start;
+
+        .heading {
+            flex: 1;
+        }
+    }
+
+    &__wrapper {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
+
+.arrow-nav {
+    @include arrowNavigation;
+}
+
+.work {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &:hover {
+        .work__img {
+            transform: translateY(-10px);
+        }
+
+        .work__content,
+        &::before {
+            transform: translateY(10px);
+        }
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 160px;
+        left: 0;
+        bottom: 0;
+        border-radius: 40px;
+        z-index: 0;
+        width: 100%;
+        background-color: $c-white;
+        transition: transform 0.5s ease;
+    }
+
+    &__img {
+        @include size(320px);
+        // filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.5));
+        border-radius: 30px;
+        overflow: hidden;
+        margin-bottom: 20px;
+        transition: transform 0.5s ease;
+        position: relative;
+
+        img {
+            display: block;
+            @include size(100%);
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__content {
+        padding: 0 40px 40px;
+        position: relative;
+        z-index: 1;
+        border-radius: 40px;
+        overflow: hidden;
+        transition: transform 0.5s ease;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 31px;
+        margin-bottom: 10px;
+    }
+
+    &__description {
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 22px;
+        color: $c-grey;
+    }
+
+    &__links {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        img {
+            @include size(30px);
+        }
+
+        a {
+            background-color: $c-light;
+            @include size(50px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 15px;
+            transition: transform 0.3s ease;
+            backface-visibility: hidden;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}

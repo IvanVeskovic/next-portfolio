@@ -1,0 +1,13 @@
+.experience {
+    @include rowStyles;
+    &__content {
+        display: flex;
+        justify-content: center;
+
+        img {
+            display: block;
+            width: 1000px;
+            object-fit: contain;
+        }
+    }
+}

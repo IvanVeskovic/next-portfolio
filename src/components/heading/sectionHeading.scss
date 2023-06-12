@@ -1,0 +1,25 @@
+.heading {
+    position: relative;
+    margin-bottom: 80px;
+
+    &__main {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 40px;
+        color: $c-dark-1;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__background {
+        font-weight: 700;
+        font-size: 96px;
+        line-height: 96px;
+        display: block;
+        color: rgba($c-dark-1, 0.1);
+        position: absolute;
+        bottom: -7px;
+        left: -4px;
+        text-shadow: 0 5px 10px rgba($c-dark-1, 0.1);
+    }
+}

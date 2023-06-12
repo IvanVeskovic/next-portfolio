@@ -1,0 +1,114 @@
+{
+    "currentWorks": [
+        {
+            "id": 1,
+            "title": "Project 1",
+            "imgSrc": "/images/works/project-1.jpg",
+            "description": "D typesetting industry. Lorem Ipsum has been the industry's",
+            "githubLink": "#",
+            "liveLink": "#"
+        },
+        {
+            "id": 2,
+            "title": "Project 2",
+            "imgSrc": "/images/works/project-3.jpg",
+            "description": "d typesetting industry. Lorem Ipsum has been the industry's",
+            "githubLink": "#",
+            "liveLink": "#"
+        },
+        {
+            "id": 3,
+            "title": "Project 3",
+            "imgSrc": "/images/works/project-2.jpg",
+            "description": "d typesetting industry. Lorem Ipsum has been the industry's",
+            "githubLink": "#",
+            "liveLink": "#"
+        },
+        {
+            "id": 4,
+            "title": "Project 4",
+            "imgSrc": "/images/works/project-1.jpg",
+            "description": "D typesetting industry. Lorem Ipsum has been the industry's",
+            "githubLink": "#",
+            "liveLink": "#"
+        },
+        {
+            "id": 5,
+            "title": "Project 5",
+            "imgSrc": "/images/works/project-3.jpg",
+            "description": "d typesetting industry. Lorem Ipsum has been the industry's",
+            "githubLink": "#",
+            "liveLink": "#"
+        },
+        {
+            "id": 6,
+            "title": "Project 6",
+            "imgSrc": "/images/works/project-2.jpg",
+            "description": "d typesetting industry. Lorem Ipsum has been the industry's",
+            "githubLink": "#",
+            "liveLink": "#"
+        }
+    ],
+    "skills": [
+        {
+            "id": 1,
+            "title": "React",
+            "imgSrcs": ["/images/skills/react.svg"]
+        },
+        {
+            "id": 2,
+            "title": "Vue",
+            "imgSrcs": ["/images/skills/vue.svg"]
+        },
+        {
+            "id": 3,
+            "title": "JavaScript",
+            "imgSrcs": ["/images/skills/javaScript.png"]
+        },
+        {
+            "id": 4,
+            "title": "TypeScript",
+            "imgSrcs": ["/images/skills/typescript.png"]
+        },
+        {
+            "id": 5,
+            "title": "HTML5",
+            "imgSrcs": ["/images/skills/html.png"]
+        },
+        {
+            "id": 6,
+            "title": "CSS3",
+            "imgSrcs": ["/images/skills/css.png"]
+        },
+        {
+            "id": 7,
+            "title": "Sass",
+            "imgSrcs": ["/images/skills/sass.png"]
+        },
+        {
+            "id": 8,
+            "title": "Bootstrap",
+            "imgSrcs": ["/images/skills/bootstrap.png"]
+        },
+        {
+            "id": 9,
+            "title": "Git, GitLab & GitHub",
+            "imgSrcs": ["/images/skills/git.png", "/images/skills/github.png", "/images/skills/gitlab.png"]
+        },
+        {
+            "id": 10,
+            "title": "Npm packages",
+            "imgSrcs": ["/images/skills/npm.svg"]
+        },
+        {
+            "id": 11,
+            "title": "Figma & Zeplin",
+            "imgSrcs": ["/images/skills/figma.png", "/images/skills/zeppelin.png"]
+        },
+        {
+            "id": 12,
+            "title": "Crossbrowser: BrowserStack & LambdaTest",
+            "imgSrcs": ["/images/skills/browserstack.svg", "/images/skills/lambdatest.png"]
+        }
+    ]
+}

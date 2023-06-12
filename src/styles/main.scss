@@ -1,0 +1,15 @@
+@import './utility.scss';
+@import './global';
+@import './variables';
+@import './mixins';
+
+@import '../components/button/button.scss';
+@import '../components/heading/sectionHeading.scss';
+@import '../sections/approach/projectApproach.scss';
+@import '../sections/banner/banner.scss';
+@import '../sections/divider/sectionDivider.scss';
+@import '../sections/experience/experience.scss';
+@import '../sections/navigation/navigation.scss';
+@import '../sections/services/services.scss';
+@import '../sections/skills/skills.scss';
+@import '../sections/works/recentWorks.scss';
