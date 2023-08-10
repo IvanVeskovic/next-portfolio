@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, A11y, EffectFade } from 'swiper';
 
-import { currentWorks } from '../../data/data.json';
+import data from '../../data/data.json';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -51,7 +51,7 @@ export default function RecentWork({ }) {
 
                 >
                     {
-                        currentWorks.map(work => (
+                        data.currentWorks.map(work => (
                             <SwiperSlide key={work.id}>
                                 <RecentSingleWork title={work.title} imgSrc={work.imgSrc} description={work.description} />
                             </SwiperSlide>

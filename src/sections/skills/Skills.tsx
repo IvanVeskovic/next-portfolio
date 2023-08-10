@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, A11y, EffectFade } from 'swiper';
 
-import { skills } from '@/data/data.json';
+import data from '@/data/data.json';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -50,7 +50,7 @@ export default function Skills() {
 
                 >
                     {
-                        skills.map(skill => (
+                        data.skills.map(skill => (
                             <SwiperSlide key={skill.id}>
                                 <SingleSkill title={skill.title} images={skill.imgSrcs} />
                             </SwiperSlide>

@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: inherit;
 }
 
 body {
@@ -13,16 +14,12 @@ body {
     font-family: $f-primary;
     position: relative;
 
-    // Delete this after
-    min-height: 3000px;
-
-    &::before,
-    &::after {
+    &::before {
         content: '';
         display: block;
         position: absolute;
+        background-size: contain;
         width: 100%;
-        min-height: 1600px;
         height: 100%;
         z-index: 1;
         @include backgroundProperty(center, contain);
@@ -33,9 +30,6 @@ body {
         top: 0;
         left: 0;
         z-index: -1;
-    }
-
-    &::after {
     }
 }
 

@@ -1,0 +1,139 @@
+.contact {
+    min-height: 900px;
+    position: relative;
+
+    &-wrapper {
+        @include rowStyles;
+    }
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        display: block;
+        background-size: contain;
+        width: 100%;
+        background-repeat: no-repeat;
+        z-index: -1;
+        opacity: 0.8;
+    }
+
+    &::before {
+        height: 850px;
+        background-image: url('../../../public/images/shapes/bottom-shape-left.svg');
+        background-position: bottom left;
+    }
+
+    &::after {
+        height: 850px;
+        background-image: url('../../../public/images/shapes/bottom-shape-right.svg');
+        background-position: bottom right;
+    }
+
+    &__content {
+        max-width: 1050px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    &__background-img {
+        width: 950px;
+        height: 560px;
+        object-fit: cover;
+        border-radius: 50px;
+        box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .form-container {
+        position: absolute;
+        right: 0;
+        top: 70px;
+        z-index: 1;
+        background-color: rgba($c-white, 0.9);
+        padding: 40px;
+        border-radius: 50px;
+        box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    &-heading {
+        font-size: 20px;
+        line-height: 25px;
+        margin-bottom: 20px;
+        color: $c-dark-1;
+        font-weight: 700;
+
+        span {
+            text-decoration: underline;
+        }
+    }
+
+    &-text {
+        font-size: 17px;
+        line-height: 21px;
+        color: $c-dark-1;
+        margin-bottom: 20px;
+
+        a {
+            text-decoration: none;
+            color: $c-orange-primary;
+            font-weight: 500;
+        }
+    }
+
+    &-social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+
+        &__item {
+            width: 80px;
+            height: 80px;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+
+            img {
+                width: 50px;
+                height: 50px;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+.form {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+
+    &__input {
+        input,
+        textarea {
+            height: 50px;
+            display: block;
+            width: 100%;
+            padding-left: 20px;
+            border-radius: 20px;
+            border: none;
+            outline: none;
+            background-color: rgba($c-orange-primary, 0.7);
+            margin-bottom: 15px;
+            color: $c-dark-1;
+            font-size: 16px;
+
+            &::placeholder {
+                color: $c-grey;
+            }
+        }
+
+        textarea {
+            height: 250px;
+            padding: 20px;
+            resize: none;
+        }
+    }
+}

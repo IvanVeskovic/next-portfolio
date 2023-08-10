@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { ThemeContext } from '../../../context/ThemeContext';
 
 const Navigation = () => {
-    const [isDarkTheme, setIsDarkTheme] = useState(false);
     const [showFullScreenNavigation, setShowFullScreenNavigation] = useState(false);
+
+    const { theme, updateTheme } = useContext(ThemeContext)
 
     return (
         <nav className={`nav ${showFullScreenNavigation ? 'nav__full-screen' : ''}`}>
@@ -10,7 +12,7 @@ const Navigation = () => {
                 <a href="#" className="nav__logo">
                     <img src="/images/logo.svg" alt="Logo" className='nav__logo' title='Ivan Veskovic' />
                 </a>
-                <div className={`nav__theme ${isDarkTheme && 'nav__theme--dark'}`} onClick={() => setIsDarkTheme(!isDarkTheme)}>
+                <div className='nav__theme' onClick={updateTheme}>
                     <div className="nav__theme-icon"></div>
                 </div>
                 <div className="nav__button" onClick={() => setShowFullScreenNavigation(!showFullScreenNavigation)}>
