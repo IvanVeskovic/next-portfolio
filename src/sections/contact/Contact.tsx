@@ -13,12 +13,15 @@ function Contact() {
     return (
         <section className='contact'>
             <div className="contact-wrapper">
-                <SectionHeading title="Experience" />
+                <SectionHeading title="Contact" />
                 <div className="contact__content">
-                    <Image src={contactImage} width={500}
-                        height={500}
-                        alt="Picture of the author"
-                        className='contact__background-img' />
+                    <div className='contact__background-img'>
+                        <Image src={contactImage}
+                            fill={true}
+                            alt="Picture of the author"
+                        />
+                    </div>
+
 
                     <div className="form-container">
                         <h3 className="contact-heading">
@@ -39,10 +42,10 @@ function Contact() {
                             </div>
                         </form>
                         <div className="contact-social">
-                            <SocialItem imgSrc={contactMobile} altText="Contact Mobile" />
-                            <SocialItem imgSrc={contactGithub} altText="Contact GitHub" />
-                            <SocialItem imgSrc={contactLinkedin} altText="Contact Linkedin" />
-                            <SocialItem imgSrc={contactMail} altText="Contact Mail" />
+                            <SocialItem link="#" imgSrc={contactMobile} altText="Contact Mobile" />
+                            <SocialItem link="#" imgSrc={contactGithub} altText="Contact GitHub" />
+                            <SocialItem link="#" imgSrc={contactLinkedin} altText="Contact Linkedin" />
+                            <SocialItem link="#" imgSrc={contactMail} altText="Contact Mail" />
                         </div>
                     </div>
                 </div>

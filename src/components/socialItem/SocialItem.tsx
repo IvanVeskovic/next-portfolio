@@ -1,11 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
 
-function SocialItem({ imgSrc, altText }: { [key: string]: string }) {
+function SocialItem({ imgSrc, altText, link }: { [key: string]: string }) {
     return (
-        <div className="contact-social__item">
+        <a href={link} className="contact-social__item">
             <Image src={imgSrc} height={20} width={20} alt={altText} />
-        </div>
+        </a>
     )
 }
 
