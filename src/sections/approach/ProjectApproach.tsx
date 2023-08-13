@@ -3,7 +3,7 @@ import SectionHeading from "@/components/heading/SectionHeading";
 export default function ProjectApproach() {
 
     return (
-        <section className="approach">
+        <section className="approach" id="approach">
             <SectionHeading title="Approach" />
 
 

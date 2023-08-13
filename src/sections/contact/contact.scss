@@ -1,5 +1,5 @@
 .contact {
-    min-height: 900px;
+    min-height: 1000px;
     position: relative;
 
     &-wrapper {
@@ -83,7 +83,7 @@
         font-weight: 700;
 
         span {
-            text-decoration: underline;
+            text-transform: uppercase;
         }
     }
 
@@ -114,6 +114,17 @@
             align-items: center;
             justify-content: center;
             border-radius: 50%;
+            transition: all 0.2s ease;
+
+            &:hover {
+                box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.15);
+                transform: translateY(-5px) scale(1.05);
+            }
+
+            &:active {
+                box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.2);
+                transform: translateY(-2px) scale(1.02);
+            }
 
             img {
                 width: 50px;
@@ -130,6 +141,8 @@
     margin-bottom: 20px;
 
     &__input {
+        margin-bottom: 15px;
+
         input,
         textarea {
             height: 50px;
@@ -139,8 +152,7 @@
             border-radius: 20px;
             border: none;
             outline: none;
-            background-color: rgba($c-orange-primary, 0.7);
-            margin-bottom: 15px;
+            background-color: rgba($c-orange-primary, 0.4);
             color: $c-dark-1;
             font-size: 16px;
 
@@ -153,6 +165,45 @@
             height: 250px;
             padding: 20px;
             resize: none;
+        }
+
+        &.error {
+            input,
+            textarea {
+                border: 1px solid $c-red-primary;
+            }
+        }
+
+        &__error {
+            color: $c-red-primary;
+            font-size: 14px;
+            padding-left: 10px;
+        }
+    }
+
+    &__submit {
+        display: block;
+        width: 100%;
+        height: 50px;
+        background-image: linear-gradient(90deg, $c-orange-primary, $c-orange-secondary);
+        border-radius: 15px;
+        border: none;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 700;
+        color: $c-white;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+            box-shadow: 0 6px 6px rgba(0, 0, 0, 0.25);
+            transform: translateY(-5px);
+        }
+
+        &:active {
+            box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
+            transform: translateY(-2px);
         }
     }
 }

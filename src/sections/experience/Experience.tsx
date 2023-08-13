@@ -2,7 +2,7 @@ import SectionHeading from "@/components/heading/SectionHeading";
 
 export default function Experience() {
     return (
-        <section className="experience">
+        <section className="experience" id="experience">
             <SectionHeading title="Experience" />
 
             <div className="experience__content">

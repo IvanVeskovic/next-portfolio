@@ -8,10 +8,28 @@ import contactMail from '../../../public/images/social/mail.svg';
 
 import Image from 'next/image';
 import SocialItem from '@/components/socialItem/SocialItem';
+import { useForm, SubmitHandler } from 'react-hook-form';
+
+interface FormInputs {
+    name: string;
+    email: string;
+    message: string;
+}
 
 function Contact() {
+    const { register, handleSubmit, formState: { errors } } = useForm<FormInputs>();
+    const onSubmit: SubmitHandler<any> = (someData: any) => console.log(errors);
+
+    const errorMessages = {
+        required: "Please fill in this field",
+        patter: "Please enter valid email address",
+        minLength: "Minimum number of characters is 20 characaters"
+    }
+
+    const emailPattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
     return (
-        <section className='contact'>
+        <section className="contact" id="contact">
             <div className="contact-wrapper">
                 <SectionHeading title="Contact" />
                 <div className="contact__content">
@@ -30,16 +48,28 @@ function Contact() {
                         <p className="contact-text">
                             Email me to: <a href="mailto:i.veskovic92@gmail.com">i.veskovic92@gmail.com</a> or with the following form
                         </p>
-                        <form noValidate className='form'>
-                            <div className="form__input form__input--name">
-                                <input type="text" name='name' placeholder='First & Last name' />
+                        <form noValidate className='form' onSubmit={handleSubmit(onSubmit)}>
+                            <div className={`form__input form__input--name ${errors.name?.message ? 'error' : ''}`}>
+                                <input
+                                    {...register("name", { required: { value: true, message: errorMessages.required } })}
+                                    type="text"
+                                    name='name'
+                                    placeholder='First & Last name' />
+                                <span className='form__input__error'>{errors.name?.message}</span>
                             </div>
-                            <div className="form__input form__input--email">
-                                <input type="email" name='email' placeholder='First & Last name' />
+                            <div className={`form__input form__input--email ${errors.email?.message ? 'error' : ''}`}>
+                                <input
+                                    {...register("email", { required: { value: true, message: errorMessages.required }, pattern: { value: emailPattern, message: errorMessages.patter } })}
+                                    type="email"
+                                    name='email'
+                                    placeholder='Email' />
+                                <span className='form__input__error'>{errors.email?.message}</span>
                             </div>
-                            <div className="form__input form__input--text">
-                                <textarea name="message" placeholder='Please enter yout message'></textarea>
+                            <div className={`form__input form__input--text ${errors.message?.message ? 'error' : ''}`}>
+                                <textarea {...register("message", { required: { value: true, message: errorMessages.required }, minLength: { value: 20, message: `${errorMessages.minLength}` } })} name="message" placeholder='Please enter yout message'></textarea>
+                                <span className='form__input__error'>{errors.message?.message}</span>
                             </div>
+                            <input type='submit' value="Submit form" className='form__submit' />
                         </form>
                         <div className="contact-social">
                             <SocialItem link="#" imgSrc={contactMobile} altText="Contact Mobile" />

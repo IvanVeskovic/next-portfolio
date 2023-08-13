@@ -7,7 +7,7 @@ import Skills from '@/sections/skills/Skills';
 import SectionDivider from '@/sections/divider/SectionDivider';
 import Experience from '@/sections/experience/Experience';
 import ProjectApproach from '@/sections/approach/ProjectApproach';
-import { ThemeContextProvider } from '../../context/ThemeContext.js'
+import { ThemeContext, ThemeContextProvider } from '../../context/ThemeContext.js'
 import Contact from '@/sections/contact/Contact';
 
 const inter = Inter({ subsets: ['latin'] })

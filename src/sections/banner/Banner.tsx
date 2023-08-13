@@ -2,7 +2,7 @@ import Button from '@/components/button/Button';
 
 export default function Banner() {
     return (
-        <header className='hero'>
+        <header className='hero' id="home">
             <div className="hero__content">
                 <p>
                     Welcome to my personal portfolio
